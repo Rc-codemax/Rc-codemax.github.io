@@ -441,17 +441,12 @@ img{
   }
   .home__img{
     right: 10%;
-    left: 20%;
   }
 }
 
-@media screen and (min-width: 500px){
+@media screen and (max-width: 500px){
   .skills__img{
     display: none;
-  }
-
-  .home__img{
-    width: 100px;
   }
   
 }
