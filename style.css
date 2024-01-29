@@ -305,13 +305,13 @@ img{
   z-index: var(--z-back);
 }
 .skills__webdev{
-  width: 92%;
+  width: 100%;
 }
 .skills__python{
-  width: 70%;
+  width: 90%;
 }
 .skills__DevOps{
-  width: 50%;
+  width: 80%;
 }
 .skills__java{
   width: 100%;
