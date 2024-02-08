@@ -326,22 +326,58 @@ img{
 
 
 /* =====CERTIFICATIONS & WORK =====*/
-.work__container{
-  row-gap: 1rem;
+.work__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Adjust the minmax values as needed */
+    gap: 1rem;
 }
-.work__img{
-  box-shadow: 0 4px 25px rgba(14,36,49,.15);
-  border-radius: .5rem;
-  overflow: hidden;
+
+.work__item {
+    width: 100%; /* Ensure each item takes the full width */
 }
-.work__img img{
-  transition: 1s;
-  cursor: pointer;
+
+.work__img {
+    position: relative;
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
+
+.work__img img {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    cursor: pointer;
+}
+
 .work__img img:hover{
   transform: scale(1.1);
 }
 
+.cert-name {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.work__item:hover .cert-name {
+    visibility: visible;
+    opacity: 1;
+}
+
+.work__item:hover .work__img {
+    transform: scale(1.1);
+}
 
 
 /* ===== FOOTER =====*/
